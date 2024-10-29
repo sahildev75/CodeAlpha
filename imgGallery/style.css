@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f3;
+    background-image: linear-gradient(315deg, #eef2f3 0%, #8e9eab 74%);
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    padding: 20px; /* Add padding for better spacing */
+    margin: 20px 0; /* Margin to separate from gallery */
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto; /* Center the gallery */
+    align-items: center; /* Align items vertically */
+}
+
+.gallery-item {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Start with hidden opacity */
+    animation: fadeIn 0.5s forwards; /* Fade-in animation */
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slide in from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border: 6px solid #ff4081;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.5s ease; /* Slide-in animation for lightbox image */
+}
+
+@keyframes slideIn {
+    from {
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0; /* Start hidden */
+    }
+    to {
+        transform: scale(1);
+        opacity: 1; /* Fully visible */
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ff4081;
+    font-size: 36px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ff6f61;
+}
+
+/* Improved lightbox behavior */
+.lightbox:target {
+    display: flex;
+    opacity: 1; /* Ensure visibility */
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .gallery-item {
+        height: 120px; /* Adjust height for smaller screens */
+    }
+}

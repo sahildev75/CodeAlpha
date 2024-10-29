@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery">
+        <h1 style="text-align: center; background-color: black; color: white; border-radius: 12px; width: 220px; height: 140px;">Simple Image Gallery</h1>
+        <img src="Images/img1.jpg" alt="Description of Image 1" class="gallery-item">
+        <img src="Images/img2.jpg" alt="Description of Image 2" class="gallery-item">
+        <img src="Images/img3.jpg" alt="Description of Image 3" class="gallery-item">
+        <img src="Images/img4.jpg" alt="Description of Image 4" class="gallery-item">
+        <img src="Images/img5.jpg" alt="Description of Image 4" class="gallery-item">
+        <img src="Images/img6.jpg" alt="Description of Image 4" class="gallery-item">
+        <img src="Images/img7.jpg" alt="Description of Image 4" class="gallery-item">
+        <img src="Images/img9.jpg" alt="Description of Image 4" class="gallery-item">
+        <img src="Images/img10.jpg" alt="Description of Image 4" class="gallery-item">
+        <img src="Images/img11.jpg" alt="Description of Image 4" class="gallery-item">
+        <img src="Images/img12.jpg" alt="Description of Image 4" class="gallery-item">
+    </div>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" tabindex="-1">
+        <span class="close" aria-label="Close lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Expanded view of selected image">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
