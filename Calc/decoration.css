@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+}
+body{
+    height: 100vh;
+    width: 100%;
+    /* horizontally shift kia */
+    align-items: center;
+    /* vertically shift kia */
+    background: linear-gradient(45deg, #0a0a0a,#3a4452);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+}
+.calc{
+    height: auto;
+    width: auto;
+    border: 3px solid black;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgbs(113,115,119,0.5);
+    /* margin-top: 60px; */
+    /* backdrop-filter: blur(15px); */
+}
+input{
+    width: 315px;
+    border: none;
+    padding: 25px;
+    margin: 10px;background: transparent;
+    box-shadow:  0px 3px 15px rgbs(84,84,84,0.1) ;
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    color: white;
+}
+input::placeholder{
+    color: white;
+}
+button{
+    /* border: none; */
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    font-size: 25px;
+    box-shadow: -6px -6px 15px rgba(85, 123, 83, 0.2);
+    cursor: pointer;
+    font-style: italic;
+}
+.clrbtn{
+    width: 146px;
+    height: 60px;
+    background-color: red;
+    font-style: italic;
+}
+.clrbtn:hover{
+    background-color: black;
+}
+.plusbtn{
+    background-color: green;
+    height: 130px;
+    float: right;
+    font-weight: bold;
+    font-size: 30px;
+}
+.plusbtn:hover{
+    background-color: black;
+}
+.equalbtn{
+    background-color: rgb(34, 34, 185);
+    font-weight: bold;
+    font-size: 30px;
+}
+.equalbtn:hover{
+    background-color: black;
+}
+.operator{
+    color: rgb(38, 205, 0);
+    font-weight: bold;
+    font-style: italic;
+}
+#heads{
+    color: white;
+    font-weight: bold;
+    /* text-decoration: underline; */
+    font-style: italic;
+    font-size: 35px;
+}
+
+@media only screen and (max-width:500px){
+    body{
+        flex-direction: column;
+    }
+    #heads{
+        /* display flex is uesed for flexing the display like wraping the text or the content contains the div */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
